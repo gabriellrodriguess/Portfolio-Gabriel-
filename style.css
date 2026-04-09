@@ -16,6 +16,7 @@ body {
   color: #fff;
 }
 
+/* iPhone */
 .iphone {
   width: 395px;
   height: 835px;
@@ -40,164 +41,11 @@ body {
   border-radius: 999px;
 }
 
+/* Tela */
 .screen {
   width: 100%;
   height: 100%;
   border-radius: 42px;
   overflow-y: auto;
   background: linear-gradient(180deg, #051125, #020817);
-  padding: 72px 18px 28px;
-}
-
-.hero {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-/* 👇 FOTO CORRIGIDA AQUI */
-.avatar-wrap {
-  width: 150px;
-  height: 150px;
-  margin: 0 auto 18px;
-  border-radius: 50%;
-  padding: 4px;
-  background: linear-gradient(180deg, #3ea1ff, #0f4fd8);
-  box-shadow:
-    0 0 0 6px rgba(62, 161, 255, 0.08),
-    0 0 50px rgba(62, 161, 255, 0.35);
-}
-
-.avatar {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center top; /* 👈 MOSTRA MELHOR O ROSTO */
-}
-
-/* TEXTO */
-.hero h1 {
-  font-size: 32px;
-  font-weight: 800;
-  margin-bottom: 6px;
-}
-
-.cargo {
-  color: #2f8dff;
-  margin-bottom: 10px;
-}
-
-.stack {
-  color: #9fb0c7;
-  font-size: 14px;
-  margin-bottom: 12px;
-}
-
-.descricao {
-  color: #d6deea;
-  font-size: 14px;
-  line-height: 1.5;
-  max-width: 280px;
-  margin: 0 auto 15px;
-}
-
-/* BOTÕES */
-.socials {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
-
-.socials a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 13px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-/* SEÇÕES */
-.section {
-  margin-bottom: 25px;
-}
-
-.section h2 {
-  margin-bottom: 12px;
-}
-
-/* CARD */
-.glass-card {
-  background: rgba(255, 255, 255, 0.06);
-  border-radius: 18px;
-  padding: 15px;
-}
-
-/* PROJETOS */
-.projects {
-  display: grid;
-  gap: 12px;
-}
-
-.project-card {
-  background: #0d1c33;
-  border-radius: 18px;
-  overflow: hidden;
-}
-
-.project-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-}
-
-.project-content {
-  padding: 12px;
-}
-
-.project-card h3 {
-  margin-bottom: 6px;
-}
-
-.project-card p {
-  font-size: 13px;
-  margin-bottom: 8px;
-}
-
-.project-card a {
-  color: #2f8dff;
-  text-decoration: none;
-}
-
-/* SKILLS */
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.skills span {
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
-  font-size: 13px;
-}
-
-/* CONTATO */
-.contact-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.contact-item {
-  display: grid;
-  grid-template-columns: 30px 1fr;
-  gap: 10px;
-  align-items: center;
-  text-decoration: none;
-  color: #fff;
-  padding: 12px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.07);
-}
+  padding
