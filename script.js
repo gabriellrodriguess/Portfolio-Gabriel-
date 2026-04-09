@@ -1,49 +1,9 @@
-// Mensagem inicial
-console.log("Portfólio carregado");
+const screen = document.querySelector(".screen");
+const cards = document.querySelectorAll(".project-card, .glass-card, .contact-item, .skills span");
 
-// ===== BOTÃO VOLTAR AO TOPO =====
-const tela = document.querySelector(".tela");
-
-const botaoTopo = document.createElement("button");
-botaoTopo.innerText = "↑";
-botaoTopo.style.position = "absolute";
-botaoTopo.style.right = "20px";
-botaoTopo.style.bottom = "20px";
-botaoTopo.style.width = "40px";
-botaoTopo.style.height = "40px";
-botaoTopo.style.border = "none";
-botaoTopo.style.borderRadius = "50%";
-botaoTopo.style.background = "#38bdf8";
-botaoTopo.style.color = "#000";
-botaoTopo.style.fontSize = "20px";
-botaoTopo.style.cursor = "pointer";
-botaoTopo.style.display = "none";
-
-document.querySelector(".iphone").appendChild(botaoTopo);
-
-// Mostrar botão ao rolar
-tela.addEventListener("scroll", () => {
-  if (tela.scrollTop > 200) {
-    botaoTopo.style.display = "block";
-  } else {
-    botaoTopo.style.display = "none";
-  }
-});
-
-// Voltar ao topo
-botaoTopo.addEventListener("click", () => {
-  tela.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-});
-
-// ===== ANIMAÇÃO DE ENTRADA =====
-const cards = document.querySelectorAll(".card");
-
-cards.forEach((card) => {
-  card.style.opacity = "0";
-  card.style.transform = "translateY(20px)";
+cards.forEach((item) => {
+  item.style.opacity = "0";
+  item.style.transform = "translateY(18px)";
 });
 
 const observer = new IntersectionObserver((entries) => {
@@ -51,11 +11,12 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.style.opacity = "1";
       entry.target.style.transform = "translateY(0)";
-      entry.target.style.transition = "0.5s";
+      entry.target.style.transition = "all 0.5s ease";
     }
   });
+}, {
+  root: screen,
+  threshold: 0.15
 });
 
-cards.forEach((card) => {
-  observer.observe(card);
-});
+cards.forEach((item) => observer.observe(item));
