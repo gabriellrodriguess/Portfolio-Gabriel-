@@ -1,9 +1,11 @@
 const screen = document.querySelector(".screen");
-const cards = document.querySelectorAll(".project-card, .glass-card, .contact-item, .skills span");
+const animatedItems = document.querySelectorAll(
+  ".glass-card, .project-card, .skills span, .contact-item, .socials a"
+);
 
-cards.forEach((item) => {
+animatedItems.forEach((item) => {
   item.style.opacity = "0";
-  item.style.transform = "translateY(18px)";
+  item.style.transform = "translateY(20px)";
 });
 
 const observer = new IntersectionObserver((entries) => {
@@ -11,7 +13,7 @@ const observer = new IntersectionObserver((entries) => {
     if (entry.isIntersecting) {
       entry.target.style.opacity = "1";
       entry.target.style.transform = "translateY(0)";
-      entry.target.style.transition = "all 0.5s ease";
+      entry.target.style.transition = "all 0.55s ease";
     }
   });
 }, {
@@ -19,4 +21,4 @@ const observer = new IntersectionObserver((entries) => {
   threshold: 0.15
 });
 
-cards.forEach((item) => observer.observe(item));
+animatedItems.forEach((item) => observer.observe(item));
